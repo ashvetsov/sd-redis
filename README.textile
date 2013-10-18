@@ -69,3 +69,13 @@ h2. Installation
 * Configure your agent so that it knows about plugins http://www.serverdensity.com/docs/agent/plugins/ 
 * Move Redis.py into that directory 
 * Restart the agent (service sd-agent restart)
+
+h2. Configuration
+
+<pre>
+  [Redis]
+  # Password for local Redis instance authentication
+  password: redis_password
+  # Comma-separated list of queues to monitor with `redis-cli llen` in format `[queue_name]@db[db_number]
+  queues: queue_name@db0
+</pre>
